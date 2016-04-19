@@ -1,0 +1,8 @@
+version: '2'
+services:
+
+  springxd-shell:
+    build: ./
+    network_mode: "host"
+    volumes:
+      - ./../config/servers.yml:/opt/spring-xd/xd/config/servers.yml

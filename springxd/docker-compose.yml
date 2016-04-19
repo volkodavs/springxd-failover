@@ -1,0 +1,121 @@
+version: '2'
+services:
+
+  springxd-base:
+    build: ./base/
+
+  springxd-admin1:
+    build: ./admin/
+    container_name: xd-admin1
+    depends_on:
+      - springxd-base
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    environment:
+      - JMX_PORT=9001
+      - HTTP_PORT=8881
+    network_mode: "host"
+
+  springxd-admin2:
+    build: ./admin/
+    container_name: xd-admin2
+    depends_on:
+      - springxd-base
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    environment:
+      - JMX_PORT=9002
+      - HTTP_PORT=8882
+    network_mode: "host"
+
+  springxd-admin3:
+    build: ./admin/
+    container_name: xd-admin3
+    depends_on:
+      - springxd-base
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    environment:
+      - JMX_PORT=9003
+      - HTTP_PORT=8883
+    network_mode: "host"
+
+  springxd-admin4:
+    build: ./admin/
+    container_name: xd-admin4
+    depends_on:
+      - springxd-base
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    environment:
+      - JMX_PORT=9004
+      - HTTP_PORT=8884
+    network_mode: "host"
+
+  springxd-admin5:
+    build: ./admin/
+    container_name: xd-admin5
+    depends_on:
+      - springxd-base
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    environment:
+      - JMX_PORT=9005
+      - HTTP_PORT=8885
+    network_mode: "host"
+
+
+  springxd-container1:
+    build: ./container/
+    container_name: xd-container1
+    depends_on:
+      - springxd-base
+    environment:
+      - JMX_PORT=9011
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    network_mode: "host"
+
+  springxd-container2:
+    build: ./container/
+    container_name: xd-container2
+    depends_on:
+      - springxd-base
+    environment:
+      - JMX_PORT=9012
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    network_mode: "host"
+
+  springxd-container3:
+    build: ./container/
+    container_name: xd-container3
+    depends_on:
+      - springxd-base
+    environment:
+      - JMX_PORT=9013
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    network_mode: "host"
+
+  springxd-container4:
+    build: ./container/
+    container_name: xd-container4
+    depends_on:
+      - springxd-base
+    environment:
+      - JMX_PORT=9014
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    network_mode: "host"
+
+  springxd-container5:
+    build: ./container/
+    container_name: xd-container5
+    depends_on:
+      - springxd-base
+    environment:
+      - JMX_PORT=9015
+    volumes:
+      - ./config/servers.yml:/opt/spring-xd/xd/config/servers.yml
+    network_mode: "host"
