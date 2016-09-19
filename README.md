@@ -80,7 +80,10 @@ Result: Cluster stop working in order to prevent split brain
 
 #### Monitoring
 
+* Zk top
 https://github.com/phunt/zktop
+
+![zookeeper](https://cloud.githubusercontent.com/assets/4140597/18651331/9454d928-7ec2-11e6-9116-0b0da8d3959b.png)
 
 
 
