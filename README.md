@@ -23,14 +23,16 @@ Test Spring XD Failover
 * Stop 2 kafka nodes
 * Stop 1 zk nodes
 
-Result: After partitions rebalancing producer MUST work as usual 
+Result: 
+* After partitions rebalancing producer MUST work as usual 
 
 #### Positive test #2
 * Create topic with replication factor 1, partition 1
 * Find leader for topic (for example: for topic test3 leader node #1)
 * Stop 2,3,4,5 Kafka nodes
 
-Result: Topic should work as usual
+Result: 
+* Topic should work as usual
 
 #### Positive test #3
 * Kill all kafkas
@@ -44,13 +46,15 @@ Result:
 #### Negative test #1
 * Stop 2 zk noded
 
-Result: Kafka stop working. (no zookeeper leader)
+Result: 
+* Kafka stop working. (no zookeeper leader)
 
 #### Negative test #2 
 * Create topic with replication factor 3
 * Stop 3 kafka
 
-Result: Kafka stop working (no kafka leader)
+Result: 
+* Kafka stop working (no kafka leader)
 
 
 #### Monitoring
@@ -116,11 +120,17 @@ https://github.com/junegunn/redis-stat
 
 ### Spring XD
 
+
+![spring xd](https://cloud.githubusercontent.com/assets/4140597/18651471/5b1cb58a-7ec3-11e6-938b-b7fbe5e5bdbd.png)
+
+
+
 #### Positive test #1
 * Start streams 
 * Increase number message producers
 
 Result:
+![start-stop-producer](https://cloud.githubusercontent.com/assets/4140597/18651516/a9deaa34-7ec3-11e6-85ad-55a015139aa2.png)
 * Lag increase after increase number produces
 * Log size and offset equals after stop producing messages
 
@@ -156,12 +166,14 @@ Positive test #5
 * Kill kafka 2
 
 Result:
+![stop3-kafkas 1](https://cloud.githubusercontent.com/assets/4140597/18651545/e025feb2-7ec3-11e6-8f0e-993920223bb8.png)
 * Kafka log recover after hard kill
  
 #### Negative test #0
 * Produce messages through jmeter 
 
 Result:
+![topic-lag](https://cloud.githubusercontent.com/assets/4140597/18651571/03d682c8-7ec4-11e6-8880-e6ef85a5a763.png)
 * After stop producing messages, we still have massage lag.
 
 #### Negative test #1
