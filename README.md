@@ -105,6 +105,15 @@ Result: After election we have 2 master (split brain)
 CAUTION: When connection with two network back, one master will be elected, and data from master (1 redis, 1 sentinel) will be lost forever. 
 See example #2 http://redis.io/topics/sentinel
 
+#### Monitoring 
+
+* Redis Stats 
+
+https://github.com/junegunn/redis-stat
+
+![redis-stat-web 1](https://cloud.githubusercontent.com/assets/4140597/18651414/f8a213d2-7ec2-11e6-9107-8aa4589b6fe2.png)
+
+
 ### Spring XD
 
 #### Positive test #1
