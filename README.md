@@ -36,9 +36,10 @@ Result: Topic should work as usual
 * Kill all kafkas
 * Start kafka 
 
-Result: Kafka start after recover log
+Result: 
+* Kafka start after recover log
 
-
+![hard-stop-kafka](https://cloud.githubusercontent.com/assets/4140597/18651111/3178683e-7ec1-11e6-881f-bf5df22a753a.png)
 
 #### Negative test #1
 * Stop 2 zk noded
@@ -52,6 +53,19 @@ Result: Kafka stop working. (no zookeeper leader)
 Result: Kafka stop working (no kafka leader)
 
 
+#### Monitoring
+
+* Kafka Offset Monitor 
+
+https://github.com/quantifind/KafkaOffsetMonitor 
+
+![kafka-manager](https://cloud.githubusercontent.com/assets/4140597/18651281/320e5398-7ec2-11e6-9c33-148e1a744fb0.png)
+
+* Kafka offset monitor graphite
+
+https://github.com/allegro/kafka-offset-monitor-graphite
+
+<img width="832" alt="kafka-offset" src="https://cloud.githubusercontent.com/assets/4140597/18651194/bb853750-7ec1-11e6-933a-cbe5dcde46c2.png">
 
 
 ### Zookeeper
