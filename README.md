@@ -61,12 +61,13 @@ Result:
 
 * Kafka Offset Monitor 
 
-https://github.com/quantifind/KafkaOffsetMonitor 
+The app simplify inspection of cluster state (topics, consumers, offsets, brokers, replica distribution, partition distribution) https://github.com/yahoo/kafka-manager
 
 ![kafka-manager](https://cloud.githubusercontent.com/assets/4140597/18651281/320e5398-7ec2-11e6-9c33-148e1a744fb0.png)
 
 * Kafka offset monitor graphite
 
+The app keeps an history of queue position and lag of the consumers so you can have an overview of what has happened in the last days.
 https://github.com/allegro/kafka-offset-monitor-graphite
 
 <img width="832" alt="kafka-offset" src="https://cloud.githubusercontent.com/assets/4140597/18651194/bb853750-7ec1-11e6-933a-cbe5dcde46c2.png">
@@ -85,7 +86,8 @@ Result: Cluster stop working in order to prevent split brain
 #### Monitoring
 
 * Zk top
-https://github.com/phunt/zktop
+
+Provides a unix “top” like utility for ZooKeeper. https://github.com/phunt/zktop
 
 ![zookeeper](https://cloud.githubusercontent.com/assets/4140597/18651331/9454d928-7ec2-11e6-9116-0b0da8d3959b.png)
 
@@ -113,17 +115,14 @@ See example #2 http://redis.io/topics/sentinel
 
 * Redis Stats 
 
+Simple Redis monitoring tool written in Ruby. It is based on INFO command of Redis, and thus generally won't affect the performance of the Redis instance unlike the other monitoring tools based on MONITOR command.
 https://github.com/junegunn/redis-stat
 
 ![redis-stat-web 1](https://cloud.githubusercontent.com/assets/4140597/18651414/f8a213d2-7ec2-11e6-9107-8aa4589b6fe2.png)
 
-
 ### Spring XD
 
-
 ![spring xd](https://cloud.githubusercontent.com/assets/4140597/18651471/5b1cb58a-7ec3-11e6-938b-b7fbe5e5bdbd.png)
-
-
 
 #### Positive test #1
 * Start streams 
